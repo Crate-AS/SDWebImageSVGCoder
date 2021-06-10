@@ -169,6 +169,7 @@ static inline NSString *SDBase64DecodedString(NSString *base64String) {
         return nil;
     }
     image = [[NSImage alloc] initWithSize:imageRep.size];
+    image.size = CGSizeMake(100, 100);
     [image addRepresentation:imageRep];
 #else
     CGSVGDocumentRef document = SDCGSVGDocumentCreateFromData((__bridge CFDataRef)data, NULL);
